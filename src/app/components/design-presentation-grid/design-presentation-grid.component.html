@@ -1,0 +1,13 @@
+<div class="grid-container">
+  <mat-grid-list cols="2" rowHeight="350px" gutterSize="2rem">
+    @for (card of cards; track i; let i = $index) {
+      <mat-grid-tile
+        [colspan]="card.cols"
+        [rowspan]="card.rows"
+      >
+        <ng-container *ngTemplateOutlet="card.item.designItemWrapperRef">
+        </ng-container>
+      </mat-grid-tile>
+    }
+  </mat-grid-list>
+</div>

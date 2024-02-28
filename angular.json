@@ -29,8 +29,15 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "styles": [
-              "src/styles.scss"
+              "@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "src/styles.scss",
+              "./node_modules/highlight.js/styles/stackoverflow-dark.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -95,6 +102,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.scss"
             ],
             "scripts": []

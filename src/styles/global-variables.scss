@@ -1,0 +1,61 @@
+@use "../../node_modules/@angular/material/index" as mat;
+
+$theme: mat.define-dark-theme((
+  color: (
+    primary: mat.define-palette(mat.$blue-gray-palette),
+    accent: mat.define-palette(mat.$grey-palette),
+    warn: mat.define-palette(mat.$pink-palette)
+  ),
+  typography: mat.define-typography-config(),
+  density: 0,
+));
+
+$color-palette-hue-list: (
+  default,
+  lighter,
+  darker,
+  text,
+  default-contrast,
+  lighter-contrast,
+  darker-contrast,
+  50,
+  100,
+  200,
+  300,
+  400,
+  500,
+  600,
+  700,
+  800,
+  900,
+  A100,
+  A200,
+  A400,
+  A700,
+);
+
+$color-palette-names: (primary, accent, warn);
+
+@mixin get-elevation($level) {
+  @include mat.elevation($level)
+}
+
+@function get-color($palette, $hue) {
+  @return mat.get-theme-color($theme, $palette, $hue)
+}
+
+@function get-primary-color($hue) {
+  @return mat.get-theme-color($theme, primary, $hue)
+}
+
+@function get-accent-color($hue) {
+  @return mat.get-theme-color($theme, accent, $hue)
+}
+
+@function get-warn-color($hue) {
+  @return mat.get-theme-color($theme, warn, $hue)
+}
+
+@mixin elevate($level) {
+  @include mat.elevation($level);
+}

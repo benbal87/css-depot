@@ -1,0 +1,35 @@
+<ng-template #designItemWrapperRef>
+
+  <mat-tab-group class="primary-800-bg wrapper" [selectedIndex]="0">
+    <mat-tab label="View">
+      <ng-container *ngComponentOutlet="designItem"></ng-container>
+    </mat-tab>
+    <mat-tab label="Template">
+      <pre><code [highlight]="template"></code></pre>
+      <button
+        class="btn-default"
+        [cdkCopyToClipboard]="template"
+      >
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Copy Content"
+          fontIcon="content_copy"
+        ></mat-icon>
+      </button>
+    </mat-tab>
+    <mat-tab label="SCSS">
+      <pre><code [highlight]="style"></code></pre>
+      <button
+        class="btn-default"
+        [cdkCopyToClipboard]="style"
+      >
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Copy Content"
+          fontIcon="content_copy"
+        ></mat-icon>
+      </button>
+    </mat-tab>
+  </mat-tab-group>
+
+</ng-template>
