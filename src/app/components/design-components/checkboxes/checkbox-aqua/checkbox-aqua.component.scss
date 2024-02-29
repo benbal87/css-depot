@@ -1,10 +1,10 @@
+@import "global-variables";
+
 :host {
-  align-items: center;
+  @include design-item-view;
+  flex-flow: row;
+  justify-content: space-evenly;
   background-color: #d9e3f2;
-  display: flex;
-  height: 300px;
-  justify-content: space-around;
-  width: 80vw;
 }
 
 div.checkbox-aqua-1 {

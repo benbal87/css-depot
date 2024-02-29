@@ -26,7 +26,7 @@ export class CheckboxDarkComponent implements GeneralDesignComponent {
           id="checkboxDark"
           type="checkbox"
           class="checkbox-dark"
-          [disabled]="false"
+          disabled
         />
         <label for="checkboxDark">
           Checkbox Label
