@@ -1,0 +1,52 @@
+@import "global-variables";
+
+:host {
+  @include design-item-view;
+  flex-flow: row;
+  justify-content: space-evenly;
+  background-color: get-primary-color(900);
+}
+
+div.loader-container {
+  @keyframes loading {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes loading-circle {
+    0% {
+      stroke-dashoffset: 0
+    }
+    100% {
+      stroke-dashoffset: -600;
+    }
+  }
+
+  & > h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    font-weight: 300;
+    color: white;
+  }
+
+  & > svg {
+    width: 150px;
+    animation: loading 3s linear infinite;
+
+    & > circle {
+      stroke-dashoffset: 0;
+      stroke-dasharray: 300;
+      stroke-width: 10;
+      stroke-miterlimit: 10;
+      stroke-linecap: round;
+      stroke: white;
+      animation: loading-circle 2s linear infinite;
+      fill: transparent;
+    }
+  }
+}
