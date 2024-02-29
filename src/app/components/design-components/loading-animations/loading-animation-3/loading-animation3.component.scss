@@ -38,8 +38,8 @@ div.loader-container {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 
-    $degree: 720 / 62;
-    $delay: 3 / 62;
+    $degree: calc(720 / 62);
+    $delay: calc(3 / 62);
 
     @function get-transform($d) {
       @return rotate(#{$d}deg) translate3d(80px, 0, 0)
@@ -47,8 +47,8 @@ div.loader-container {
 
     @for $index from 1 through 62 {
       &:nth-child(#{$index}) {
-        $degree-actual: $degree * $index;
-        $delay-actual: $delay * $index;
+        $degree-actual: calc($degree * $index);
+        $delay-actual: calc($delay * $index);
         --moz-transform: get-transform($degree-actual);
         --ms-transform: get-transform($degree-actual);
         --webkit-transform: get-transform($degree-actual);

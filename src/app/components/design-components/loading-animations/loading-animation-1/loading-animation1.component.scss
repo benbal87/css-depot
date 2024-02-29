@@ -39,7 +39,8 @@ div.loader-container {
 
       @for $index from 1 through 7 {
         &:nth-child(#{$index}) {
-          @include get-animation(($index - 1) / 10);
+          $t: calc(($index - 1) / 10);
+          @include get-animation($t);
         }
       }
     }
