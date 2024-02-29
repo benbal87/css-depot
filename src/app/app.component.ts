@@ -29,6 +29,9 @@ import {
   CheckboxGreenLightComponent
 } from './components/design-components/checkboxes/checkbox-green-light/checkbox-green-light.component'
 import {
+  RadioButtonAquaComponent
+} from './components/design-components/radio-buttons/radio-button-aqua/radio-button-aqua.component'
+import {
   DesignItemWrapperComponent
 } from './components/design-item-wrapper/design-item-wrapper.component'
 import {
@@ -76,15 +79,15 @@ export class AppComponent implements OnInit {
       },
       {
         label: 'Radio buttons',
-        items: this.getButtons()
+        items: this.getRadioButtons()
       },
       {
         label: 'Select Boxes',
-        items: this.getButtons()
+        items: []
       },
       {
         label: 'Loading Animations',
-        items: this.getButtons()
+        items: []
       }
     ]
   }
@@ -140,6 +143,16 @@ export class AppComponent implements OnInit {
         component: ButtonStrokeComponent,
         template: ButtonStrokeComponent.template,
         style: ButtonStrokeComponent.style
+      }
+    ]
+  }
+
+  private getRadioButtons(): Display[] {
+    return [
+      {
+        component: RadioButtonAquaComponent,
+        template: RadioButtonAquaComponent.template,
+        style: RadioButtonAquaComponent.style
       }
     ]
   }
