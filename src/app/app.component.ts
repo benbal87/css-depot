@@ -5,6 +5,9 @@ import {
   ButtonFillingHoverComponent
 } from './components/design-components/buttons/button-filling-hover/button-filling-hover.component'
 import {
+  ButtonSnakeComponent
+} from './components/design-components/buttons/button-snake/button-snake.component'
+import {
   CheckboxAquaCircleComponent
 } from './components/design-components/checkboxes/checkbox-aqua-circle/checkbox-aqua-circle.component'
 import {
@@ -124,6 +127,11 @@ export class AppComponent implements OnInit {
         component: ButtonFillingHoverComponent,
         template: ButtonFillingHoverComponent.template,
         style: ButtonFillingHoverComponent.style
+      },
+      {
+        component: ButtonSnakeComponent,
+        template: ButtonSnakeComponent.template,
+        style: ButtonSnakeComponent.style
       }
     ]
   }
