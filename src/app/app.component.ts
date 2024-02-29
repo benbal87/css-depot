@@ -1,5 +1,5 @@
 import { CdkCopyToClipboard } from '@angular/cdk/clipboard'
-import { Component, OnInit, Type } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { MatTab, MatTabGroup } from '@angular/material/tabs'
 import {
   CheckboxAquaComponent
@@ -8,20 +8,12 @@ import {
   CheckboxDarkComponent
 } from './components/design-components/checkboxes/checkbox-dark/checkbox-dark.component'
 import {
-  GeneralDesignComponent
-} from './components/design-components/general-design/general-design.component'
-import {
   DesignItemWrapperComponent
 } from './components/design-item-wrapper/design-item-wrapper.component'
 import {
   DesignPresentationGridComponent
 } from './components/design-presentation-grid/design-presentation-grid.component'
-
-export type Display = {
-  component: Type<GeneralDesignComponent>,
-  template: string
-  style: string
-}
+import { Display } from './types/app.types'
 
 @Component({
   selector: 'app-root',

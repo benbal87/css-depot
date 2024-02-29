@@ -90,6 +90,8 @@ mat-tab-group.wrapper {
     height: 100%;
 
     & > mat-tab-body {
+      padding: 1rem;
+
       & > div.mat-mdc-tab-body-content {
         position: relative;
         display: flex;

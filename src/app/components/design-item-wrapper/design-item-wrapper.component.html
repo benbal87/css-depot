@@ -1,14 +1,14 @@
 <ng-template #designItemWrapperRef>
 
-  <mat-tab-group class="primary-800-bg wrapper" [selectedIndex]="0">
+  <mat-tab-group class="primary-800-bg wrapper" [selectedIndex]="1">
     <mat-tab label="View">
-      <ng-container *ngComponentOutlet="designItem"></ng-container>
+      <ng-container *ngComponentOutlet="display.component"></ng-container>
     </mat-tab>
     <mat-tab label="Template">
-      <pre><code [highlight]="template"></code></pre>
+      <pre><code [highlight]="display.template"></code></pre>
       <button
         class="btn-default"
-        [cdkCopyToClipboard]="template"
+        [cdkCopyToClipboard]="display.template"
       >
         <mat-icon
           aria-hidden="false"
@@ -18,10 +18,10 @@
       </button>
     </mat-tab>
     <mat-tab label="SCSS">
-      <pre><code [highlight]="style"></code></pre>
+      <pre><code [highlight]="display.style"></code></pre>
       <button
         class="btn-default"
-        [cdkCopyToClipboard]="style"
+        [cdkCopyToClipboard]="display.style"
       >
         <mat-icon
           aria-hidden="false"

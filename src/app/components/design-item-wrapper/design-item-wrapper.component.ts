@@ -1,12 +1,10 @@
 import { CdkCopyToClipboard } from '@angular/cdk/clipboard'
 import { NgComponentOutlet, NgTemplateOutlet } from '@angular/common'
-import { Component, Input, TemplateRef, Type, ViewChild } from '@angular/core'
+import { Component, Input, TemplateRef, ViewChild } from '@angular/core'
 import { MatIcon } from '@angular/material/icon'
 import { MatTab, MatTabGroup } from '@angular/material/tabs'
 import { Highlight } from 'ngx-highlightjs'
-import {
-  GeneralDesignComponent
-} from '../design-components/general-design/general-design.component'
+import { Display } from '../../types/app.types'
 
 @Component({
   selector: 'design-item-wrapper',
@@ -28,13 +26,7 @@ export class DesignItemWrapperComponent {
   @ViewChild('designItemWrapperRef')
   designItemWrapperRef!: TemplateRef<any>
 
-  @Input({ required: true, alias: 'design-item' })
-  designItem!: Type<GeneralDesignComponent>
-
-  @Input({ required: true, alias: 'template' })
-  template!: string
-
-  @Input({ required: true, alias: 'style' })
-  style!: string
+  @Input({ required: true, alias: 'display' })
+  display!: Display
 
 }

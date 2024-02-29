@@ -3,12 +3,7 @@
     <div class="tab-content">
       <design-presentation-grid>
         @for (item of checkboxes; track i; let i = $index) {
-          <design-item-wrapper
-            [design-item]="item.component"
-            [template]="item.template"
-            [style]="item.style"
-          >
-          </design-item-wrapper>
+          <design-item-wrapper [display]="item"></design-item-wrapper>
         }
       </design-presentation-grid>
     </div>
