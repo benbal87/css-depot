@@ -8,6 +8,9 @@ import {
   ButtonSnakeComponent
 } from './components/design-components/buttons/button-snake/button-snake.component'
 import {
+  ButtonStrokeComponent
+} from './components/design-components/buttons/button-stroke/button-stroke.component'
+import {
   CheckboxAquaCircleComponent
 } from './components/design-components/checkboxes/checkbox-aqua-circle/checkbox-aqua-circle.component'
 import {
@@ -132,6 +135,11 @@ export class AppComponent implements OnInit {
         component: ButtonSnakeComponent,
         template: ButtonSnakeComponent.template,
         style: ButtonSnakeComponent.style
+      },
+      {
+        component: ButtonStrokeComponent,
+        template: ButtonStrokeComponent.template,
+        style: ButtonStrokeComponent.style
       }
     ]
   }
