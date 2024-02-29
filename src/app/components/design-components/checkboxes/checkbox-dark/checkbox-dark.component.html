@@ -1,23 +1,42 @@
-<div class="checkbox-container">
+<div class="checkbox-dark-container">
   <input
-    id="checkboxDark"
     type="checkbox"
-    class="checkbox-dark"
-    [disabled]="false"
-  />
+    id="checkboxDark">
   <label for="checkboxDark">
     Checkbox Label
   </label>
 </div>
 
-<div class="checkbox-container">
+<div class="checkbox-dark-container">
   <input
-    id="checkboxDarkDisabled"
     type="checkbox"
-    class="checkbox-dark"
+    id="checkboxDarkChecked"
+    checked
+  >
+  <label for="checkboxDarkChecked">
+    Checked Checkbox Label
+  </label>
+</div>
+
+<div class="checkbox-dark-container">
+  <input
+    type="checkbox"
+    id="checkboxDarkDisabled"
     disabled
-  />
-  <label for="checkboxDark">
+  >
+  <label for="checkboxDarkDisabled">
     Disabled Checkbox Label
+  </label>
+</div>
+
+<div class="checkbox-dark-container">
+  <input
+    type="checkbox"
+    id="checkboxDarkDisabledChecked"
+    disabled
+    checked
+  >
+  <label for="checkboxDarkDisabledChecked">
+    Disabled & Checked Checkbox Label
   </label>
 </div>

@@ -5,7 +5,7 @@
   background-color: get-primary-color(700);
 }
 
-div.checkbox-container {
+div.checkbox-dark-container {
   $width: 3rem;
   $height: calc($width * 0.3333);
   $border-radius: calc($width * 0.1666);
@@ -17,8 +17,9 @@ div.checkbox-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
 
-  input[type="checkbox"].checkbox-dark {
+  input[type="checkbox"] {
     cursor: pointer;
     position: relative;
     width: $width;
@@ -99,13 +100,9 @@ div.checkbox-container {
         color: $default-text-color-dark;
       }
     }
-  }
 
-  label:first-child {
-    margin-left: 0.5rem;
-  }
-
-  label:last-child {
-    margin-right: 0.5rem;
+    & + label {
+      margin-left: 0.5rem;
+    }
   }
 }
