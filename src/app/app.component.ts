@@ -29,6 +29,9 @@ import {
   CheckboxGreenLightComponent
 } from './components/design-components/checkboxes/checkbox-green-light/checkbox-green-light.component'
 import {
+  LoadingAnimation1Component
+} from './components/design-components/loading-animations/loading-animation-1/loading-animation1.component'
+import {
   RadioButtonAquaComponent
 } from './components/design-components/radio-buttons/radio-button-aqua/radio-button-aqua.component'
 import {
@@ -90,7 +93,7 @@ export class AppComponent implements OnInit {
       },
       {
         label: 'Loading Animations',
-        items: []
+        items: this.getLoadingAnimations()
       }
     ]
   }
@@ -166,6 +169,16 @@ export class AppComponent implements OnInit {
         component: SelectBoxBlueComponent,
         template: SelectBoxBlueComponent.template,
         style: SelectBoxBlueComponent.style
+      }
+    ]
+  }
+
+  private getLoadingAnimations(): Display[] {
+    return [
+      {
+        component: LoadingAnimation1Component,
+        template: LoadingAnimation1Component.template,
+        style: LoadingAnimation1Component.style
       }
     ]
   }

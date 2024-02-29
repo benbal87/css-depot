@@ -1,0 +1,57 @@
+@import "global-variables";
+
+:host {
+  @include design-item-view;
+  flex-flow: row;
+  justify-content: space-evenly;
+  background-color: get-warn-color(900);
+}
+
+div.loader-container {
+  @keyframes loading-in {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    30% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  svg.loading {
+    position: absolute;
+    left: calc(50% - 100px);
+    top: calc(50% - 25px);
+    z-index: 9999;
+
+    @mixin get-animation($time) {
+      animation: loading-in 3s #{$time}s ease infinite;
+    }
+
+    & > g > path {
+      opacity: 0;
+      fill: #39c0c4;
+
+      @for $index from 1 through 7 {
+        &:nth-child(#{$index}) {
+          @include get-animation(($index - 1) / 10);
+        }
+      }
+    }
+  }
+
+  svg.ripple {
+    position: absolute;
+    left: calc(50% - 90px);
+    top: calc(50% - 90px);
+    opacity: .5;
+    z-index: 999;
+    width: 11rem;
+    height: 11rem;
+  }
+}
