@@ -248,11 +248,11 @@ export class AppComponent implements OnInit {
         template: LoadingAnimation8Component.template,
         style: LoadingAnimation8Component.style
       },
-      // {
-      //   component: LoadingAnimation9Component,
-      //   template: LoadingAnimation9Component.template,
-      //   style: LoadingAnimation9Component.style
-      // },
+      {
+        component: LoadingAnimation9Component,
+        template: LoadingAnimation9Component.template,
+        style: LoadingAnimation9Component.style
+      },
       // {
       //   component: LoadingAnimation10Component,
       //   template: LoadingAnimation10Component.template,
