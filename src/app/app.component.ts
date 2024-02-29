@@ -2,6 +2,9 @@ import { CdkCopyToClipboard } from '@angular/cdk/clipboard'
 import { Component, OnInit } from '@angular/core'
 import { MatTab, MatTabGroup } from '@angular/material/tabs'
 import {
+  ButtonFillingHoverComponent
+} from './components/design-components/buttons/button-filling-hover/button-filling-hover.component'
+import {
   CheckboxAquaCircleComponent
 } from './components/design-components/checkboxes/checkbox-aqua-circle/checkbox-aqua-circle.component'
 import {
@@ -27,6 +30,11 @@ import {
 } from './components/design-presentation-grid/design-presentation-grid.component'
 import { Display } from './types/app.types'
 
+export type Tab = {
+  label: string
+  items: Display[]
+}
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -44,14 +52,39 @@ import { Display } from './types/app.types'
 })
 export class AppComponent implements OnInit {
 
-  checkboxes: Display[] = []
+  tabs: Tab[] = []
 
   ngOnInit(): void {
-    this.setCheckboxes()
+    this.init()
   }
 
-  setCheckboxes(): void {
-    this.checkboxes = [
+  private init(): void {
+    this.tabs = [
+      {
+        label: 'Checkboxes',
+        items: this.getCheckboxes()
+      },
+      {
+        label: 'Buttons',
+        items: this.getButtons()
+      },
+      {
+        label: 'Radio buttons',
+        items: this.getButtons()
+      },
+      {
+        label: 'Select Boxes',
+        items: this.getButtons()
+      },
+      {
+        label: 'Loading Animations',
+        items: this.getButtons()
+      }
+    ]
+  }
+
+  getCheckboxes(): Display[] {
+    return [
       {
         component: CheckboxDarkComponent,
         template: CheckboxDarkComponent.template,
@@ -81,6 +114,16 @@ export class AppComponent implements OnInit {
         component: CheckboxBlueSimpleComponent,
         template: CheckboxBlueSimpleComponent.template,
         style: CheckboxBlueSimpleComponent.style
+      }
+    ]
+  }
+
+  getButtons(): Display[] {
+    return [
+      {
+        component: ButtonFillingHoverComponent,
+        template: ButtonFillingHoverComponent.template,
+        style: ButtonFillingHoverComponent.style
       }
     ]
   }
