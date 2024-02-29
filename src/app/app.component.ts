@@ -35,6 +35,9 @@ import {
   LoadingAnimation2Component
 } from './components/design-components/loading-animations/loading-animation-2/loading-animation2.component'
 import {
+  LoadingAnimation3Component
+} from './components/design-components/loading-animations/loading-animation-3/loading-animation3.component'
+import {
   RadioButtonAquaComponent
 } from './components/design-components/radio-buttons/radio-button-aqua/radio-button-aqua.component'
 import {
@@ -187,6 +190,11 @@ export class AppComponent implements OnInit {
         component: LoadingAnimation2Component,
         template: LoadingAnimation2Component.template,
         style: LoadingAnimation2Component.style
+      },
+      {
+        component: LoadingAnimation3Component,
+        template: LoadingAnimation3Component.template,
+        style: LoadingAnimation3Component.style
       }
     ]
   }
