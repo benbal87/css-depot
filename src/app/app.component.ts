@@ -32,6 +32,9 @@ import {
   RadioButtonAquaComponent
 } from './components/design-components/radio-buttons/radio-button-aqua/radio-button-aqua.component'
 import {
+  SelectBoxBlueComponent
+} from './components/design-components/select-boxes/select-box-blue/select-box-blue.component'
+import {
   DesignItemWrapperComponent
 } from './components/design-item-wrapper/design-item-wrapper.component'
 import {
@@ -83,7 +86,7 @@ export class AppComponent implements OnInit {
       },
       {
         label: 'Select Boxes',
-        items: []
+        items: this.getSelectBoxes()
       },
       {
         label: 'Loading Animations',
@@ -92,7 +95,7 @@ export class AppComponent implements OnInit {
     ]
   }
 
-  getCheckboxes(): Display[] {
+  private getCheckboxes(): Display[] {
     return [
       {
         component: CheckboxDarkComponent,
@@ -127,7 +130,7 @@ export class AppComponent implements OnInit {
     ]
   }
 
-  getButtons(): Display[] {
+  private getButtons(): Display[] {
     return [
       {
         component: ButtonFillingHoverComponent,
@@ -153,6 +156,16 @@ export class AppComponent implements OnInit {
         component: RadioButtonAquaComponent,
         template: RadioButtonAquaComponent.template,
         style: RadioButtonAquaComponent.style
+      }
+    ]
+  }
+
+  private getSelectBoxes(): Display[] {
+    return [
+      {
+        component: SelectBoxBlueComponent,
+        template: SelectBoxBlueComponent.template,
+        style: SelectBoxBlueComponent.style
       }
     ]
   }
