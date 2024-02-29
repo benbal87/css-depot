@@ -17,9 +17,22 @@ export class CheckboxGreenLightComponent implements GeneralDesignComponent {
     return DesignItemService.getFormattedTemplateFromString(
       `
       <div class="checkbox-green-light-container">
-        <input type="checkbox" id="checkboxGreenLight">
+        <input
+          type="checkbox"
+          id="checkboxGreenLight">
         <label for="checkboxGreenLight">
-          Checkbox Green Light Label
+          Checkbox Label
+        </label>
+      </div>
+
+      <div class="checkbox-green-light-container">
+        <input
+          type="checkbox"
+          id="checkboxGreenLightChecked"
+          checked
+        >
+        <label for="checkboxGreenLightChecked">
+          Checked Checkbox Label
         </label>
       </div>
 
@@ -30,7 +43,19 @@ export class CheckboxGreenLightComponent implements GeneralDesignComponent {
           disabled
         >
         <label for="checkboxGreenLightDisabled">
-          Disabled Checkbox Green Light Label
+          Disabled Checkbox Label
+        </label>
+      </div>
+
+      <div class="checkbox-green-light-container">
+        <input
+          type="checkbox"
+          id="checkboxGreenLightDisabledChecked"
+          disabled
+          checked
+        >
+        <label for="checkboxGreenLightDisabledChecked">
+          Disabled & Checked Checkbox Label
         </label>
       </div>
     `
