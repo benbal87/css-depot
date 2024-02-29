@@ -5,6 +5,9 @@ import {
   CheckboxAquaComponent
 } from './components/design-components/checkboxes/checkbox-aqua/checkbox-aqua.component'
 import {
+  CheckboxBlueSimpleComponent
+} from './components/design-components/checkboxes/checkbox-blue-simple/checkbox-blue-simple.component'
+import {
   CheckboxDarkComponent
 } from './components/design-components/checkboxes/checkbox-dark/checkbox-dark.component'
 import {
@@ -57,6 +60,11 @@ export class AppComponent implements OnInit {
         component: CheckboxGreenLightComponent,
         template: CheckboxGreenLightComponent.template,
         style: CheckboxGreenLightComponent.style
+      },
+      {
+        component: CheckboxBlueSimpleComponent,
+        template: CheckboxBlueSimpleComponent.template,
+        style: CheckboxBlueSimpleComponent.style
       }
     ]
   }
