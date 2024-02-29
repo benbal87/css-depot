@@ -1,0 +1,54 @@
+@import "global-variables";
+
+:host {
+  @include design-item-view;
+  flex-flow: row;
+  justify-content: space-evenly;
+  background-color: get-accent-color(900);
+}
+
+div.loader-container {
+  @keyframes animate {
+    0% {
+      filter: blur(0);
+    }
+
+    40% {
+      filter: blur(20px);
+    }
+
+    80% {
+      filter: blur(0);
+    }
+
+    100% {
+      filter: blur(0);
+    }
+  }
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  & > span {
+    position: relative;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    animation: animate 3s linear infinite;
+
+    @for $index from 1 through 7 {
+      $time: calc($index / 10);
+      $time-str: #{$time}s;
+
+      &:nth-child(#{$index}) {
+        --webkit-animation-delay: $time-str;
+        animation-delay: $time-str;
+      }
+    }
+  }
+}
