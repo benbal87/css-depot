@@ -159,7 +159,7 @@ export class CheckboxDarkComponent implements GeneralDesignComponent {
               cursor: not-allowed;
               opacity: 0.5;
 
-              & ~ label {
+              & + label {
                 cursor: not-allowed;
                 opacity: 0.5;
                 color: $default-text-color-dark;

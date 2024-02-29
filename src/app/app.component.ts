@@ -2,8 +2,14 @@ import { CdkCopyToClipboard } from '@angular/cdk/clipboard'
 import { Component, OnInit } from '@angular/core'
 import { MatTab, MatTabGroup } from '@angular/material/tabs'
 import {
-  CheckboxAquaComponent
-} from './components/design-components/checkboxes/checkbox-aqua/checkbox-aqua.component'
+  CheckboxAquaCircleComponent
+} from './components/design-components/checkboxes/checkbox-aqua-circle/checkbox-aqua-circle.component'
+import {
+  CheckboxAquaRoundedComponent
+} from './components/design-components/checkboxes/checkbox-aqua-rounded/checkbox-aqua-rounded.component'
+import {
+  CheckboxAquaSquareComponent
+} from './components/design-components/checkboxes/checkbox-aqua-square/checkbox-aqua-square.component'
 import {
   CheckboxBlueSimpleComponent
 } from './components/design-components/checkboxes/checkbox-blue-simple/checkbox-blue-simple.component'
@@ -30,7 +36,7 @@ import { Display } from './types/app.types'
     CheckboxDarkComponent,
     DesignPresentationGridComponent,
     DesignItemWrapperComponent,
-    CheckboxAquaComponent,
+    CheckboxAquaSquareComponent,
     CdkCopyToClipboard
   ],
   templateUrl: './app.component.html',
@@ -52,9 +58,19 @@ export class AppComponent implements OnInit {
         style: CheckboxDarkComponent.style
       },
       {
-        component: CheckboxAquaComponent,
-        template: CheckboxAquaComponent.template,
-        style: CheckboxAquaComponent.style
+        component: CheckboxAquaSquareComponent,
+        template: CheckboxAquaSquareComponent.template,
+        style: CheckboxAquaSquareComponent.style
+      },
+      {
+        component: CheckboxAquaRoundedComponent,
+        template: CheckboxAquaRoundedComponent.template,
+        style: CheckboxAquaRoundedComponent.style
+      },
+      {
+        component: CheckboxAquaCircleComponent,
+        template: CheckboxAquaCircleComponent.template,
+        style: CheckboxAquaCircleComponent.style
       },
       {
         component: CheckboxGreenLightComponent,
