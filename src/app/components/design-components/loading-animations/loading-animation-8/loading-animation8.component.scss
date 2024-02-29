@@ -1,0 +1,54 @@
+@import "global-variables";
+
+:host {
+  @include design-item-view;
+  flex-flow: row;
+  justify-content: space-evenly;
+  background-color: get-warn-color(900);
+}
+
+div.loader-container {
+  @-webkit-keyframes bouncing {
+    0%, 100% {
+      --webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    50% {
+      --webkit-transform: scale3d(0, 0, 1);
+      transform: scale3d(0, 0, 1);
+    }
+  }
+
+  @keyframes bouncing {
+    0%, 100% {
+      --webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    50% {
+      --webkit-transform: scale3d(0, 0, 1);
+      transform: scale3d(0, 0, 1);
+    }
+  }
+
+  display: flex;
+  margin: 1.5rem 0;
+
+  & > div {
+    color: white;
+    font: normal 100 2rem/1 Roboto;
+    letter-spacing: 0.5em;
+
+    -webkit-animation: bouncing 2s infinite ease;
+    animation: bouncing 2s infinite ease;
+
+    @for $index from 1 through 7 {
+      $time: calc($index / 10);
+      $time-str: #{$time}s;
+
+      &:nth-child(#{$index}) {
+        --webkit-animation-delay: $time-str;
+        animation-delay: $time-str;
+      }
+    }
+  }
+}

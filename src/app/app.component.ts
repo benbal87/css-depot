@@ -32,6 +32,15 @@ import {
   LoadingAnimation1Component
 } from './components/design-components/loading-animations/loading-animation-1/loading-animation1.component'
 import {
+  LoadingAnimation10Component
+} from './components/design-components/loading-animations/loading-animation-10/loading-animation10.component'
+import {
+  LoadingAnimation11Component
+} from './components/design-components/loading-animations/loading-animation-11/loading-animation11.component'
+import {
+  LoadingAnimation12Component
+} from './components/design-components/loading-animations/loading-animation-12/loading-animation12.component'
+import {
   LoadingAnimation2Component
 } from './components/design-components/loading-animations/loading-animation-2/loading-animation2.component'
 import {
@@ -49,6 +58,12 @@ import {
 import {
   LoadingAnimation7Component
 } from './components/design-components/loading-animations/loading-animation-7/loading-animation7.component'
+import {
+  LoadingAnimation8Component
+} from './components/design-components/loading-animations/loading-animation-8/loading-animation8.component'
+import {
+  LoadingAnimation9Component
+} from './components/design-components/loading-animations/loading-animation-9/loading-animation9.component'
 import {
   RadioButtonAquaComponent
 } from './components/design-components/radio-buttons/radio-button-aqua/radio-button-aqua.component'
@@ -227,7 +242,32 @@ export class AppComponent implements OnInit {
         component: LoadingAnimation7Component,
         template: LoadingAnimation7Component.template,
         style: LoadingAnimation7Component.style
-      }
+      },
+      {
+        component: LoadingAnimation8Component,
+        template: LoadingAnimation8Component.template,
+        style: LoadingAnimation8Component.style
+      },
+      // {
+      //   component: LoadingAnimation9Component,
+      //   template: LoadingAnimation9Component.template,
+      //   style: LoadingAnimation9Component.style
+      // },
+      // {
+      //   component: LoadingAnimation10Component,
+      //   template: LoadingAnimation10Component.template,
+      //   style: LoadingAnimation10Component.style
+      // },
+      // {
+      //   component: LoadingAnimation11Component,
+      //   template: LoadingAnimation11Component.template,
+      //   style: LoadingAnimation11Component.style
+      // },
+      // {
+      //   component: LoadingAnimation12Component,
+      //   template: LoadingAnimation12Component.template,
+      //   style: LoadingAnimation12Component.style
+      // }
     ]
   }
 }
