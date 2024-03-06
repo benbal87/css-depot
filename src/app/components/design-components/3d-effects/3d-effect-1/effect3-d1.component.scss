@@ -1,0 +1,59 @@
+@import "global-variables";
+
+:host {
+  @include design-item-view;
+  background-color: get-primary-color(50);
+  overflow: hidden;
+}
+
+div.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20rem;
+  height: 15rem;
+  transform-style: preserve-3d;
+  perspective: 20rem;
+  transition: 0.5s;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+  }
+
+  & > div.front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    transition: 0.5s;
+  }
+
+  & > div.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backface-visibility: hidden;
+    transform: rotateX(180deg);
+    transition: 0.5s;
+  }
+
+  &:hover > {
+    div.front {
+      transform: rotateX(-180deg);
+    }
+
+    div.back {
+      transform: rotateX(0deg);
+    }
+  }
+}

@@ -2,6 +2,15 @@ import { CdkCopyToClipboard } from '@angular/cdk/clipboard'
 import { Component, OnInit } from '@angular/core'
 import { MatTab, MatTabGroup } from '@angular/material/tabs'
 import {
+  Effect3D1Component
+} from './components/design-components/3d-effects/3d-effect-1/effect3-d1.component'
+import {
+  Effect3D2Component
+} from './components/design-components/3d-effects/3d-effect-2/effect3-d2.component'
+import {
+  Effect3D3Component
+} from './components/design-components/3d-effects/3d-effect-3/effect3-d3.component'
+import {
   ButtonFillingHoverComponent
 } from './components/design-components/buttons/button-filling-hover/button-filling-hover.component'
 import {
@@ -98,6 +107,9 @@ import {
   SelectBoxBlueComponent
 } from './components/design-components/select-boxes/select-box-blue/select-box-blue.component'
 import {
+  TextAnimation1Component
+} from './components/design-components/text-animations/text-animation-1/text-animation1.component'
+import {
   DesignItemWrapperComponent
 } from './components/design-item-wrapper/design-item-wrapper.component'
 import {
@@ -154,6 +166,14 @@ export class AppComponent implements OnInit {
       {
         label: 'Loading Animations',
         items: this.getLoadingAnimations()
+      },
+      {
+        label: 'Text Animations',
+        items: this.getTextAnimations()
+      },
+      {
+        label: '3D Effects',
+        items: this.get3dEffects()
       }
     ]
   }
@@ -339,6 +359,36 @@ export class AppComponent implements OnInit {
         component: LoadingAnimation21Component,
         template: LoadingAnimation21Component.template,
         style: LoadingAnimation21Component.style
+      }
+    ]
+  }
+
+  private getTextAnimations(): Display[] {
+    return [
+      {
+        component: TextAnimation1Component,
+        template: TextAnimation1Component.template,
+        style: TextAnimation1Component.style
+      }
+    ]
+  }
+
+  private get3dEffects(): Display[] {
+    return [
+      {
+        component: Effect3D1Component,
+        template: Effect3D1Component.template,
+        style: Effect3D1Component.style
+      },
+      {
+        component: Effect3D2Component,
+        template: Effect3D2Component.template,
+        style: Effect3D2Component.style
+      },
+      {
+        component: Effect3D3Component,
+        template: Effect3D3Component.template,
+        style: Effect3D3Component.style
       }
     ]
   }

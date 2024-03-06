@@ -1,0 +1,39 @@
+@import "global-variables";
+
+:host {
+  @include design-item-view;
+  background-color: get-primary-color(50);
+
+}
+
+div.container {
+  & > div.img-wrapper {
+    position: relative;
+    width: 8rem;
+    height: 12rem;
+
+    background: rgba(0, 0, 0, 0.2);
+    transform: rotate(-30deg) skew(25deg) scale(0.8);
+    transition: 0.5s;
+
+    & > img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transition: 0.5s;
+    }
+
+    &:hover > img {
+      $op-start: 0.4;
+      $op-inc: 0.2;
+      $translate-start: 1;
+      @for $index from 1 to 5 {
+        &:nth-child(#{$index}) {
+          $t: #{calc($translate-start * $index)}rem;
+          transform: translate($t, -#{$t});
+          opacity: calc($op-start + $op-inc * ($index - 1));
+        }
+      }
+    }
+  }
+}
