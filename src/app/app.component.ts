@@ -101,6 +101,9 @@ import {
   LoadingAnimation9Component
 } from './components/design-components/loading-animations/loading-animation-9/loading-animation9.component'
 import {
+  OtherDesign1Component
+} from './components/design-components/other-design/other-design-1/other-design1.component'
+import {
   RadioButtonAquaComponent
 } from './components/design-components/radio-buttons/radio-button-aqua/radio-button-aqua.component'
 import {
@@ -174,6 +177,10 @@ export class AppComponent implements OnInit {
       {
         label: '3D Effects',
         items: this.get3dEffects()
+      },
+      {
+        label: 'Other',
+        items: this.getOtherDesign()
       }
     ]
   }
@@ -389,6 +396,16 @@ export class AppComponent implements OnInit {
         component: Effect3D3Component,
         template: Effect3D3Component.template,
         style: Effect3D3Component.style
+      }
+    ]
+  }
+
+  private getOtherDesign() {
+    return [
+      {
+        component: OtherDesign1Component,
+        template: OtherDesign1Component.template,
+        style: OtherDesign1Component.style
       }
     ]
   }
