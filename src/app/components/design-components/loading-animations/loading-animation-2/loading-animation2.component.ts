@@ -118,7 +118,7 @@ export class LoadingAnimation2Component implements GeneralDesignComponent {
             margin-top: -30px;
 
             & > div {
-              content: '';
+              content: "";
               position: absolute;
               width: 16px;
               height: 16px;

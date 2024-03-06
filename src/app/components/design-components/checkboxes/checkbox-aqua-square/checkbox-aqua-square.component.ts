@@ -19,7 +19,8 @@ export class CheckboxAquaSquareComponent implements GeneralDesignComponent {
         <div class="checkbox-aqua-square-container">
           <input
             type="checkbox"
-            id="checkboxAquaSquare">
+            id="checkboxAquaSquare"
+          >
           <label for="checkboxAquaSquare">
             >
           </label>

@@ -19,7 +19,8 @@ export class CheckboxGreenLightComponent implements GeneralDesignComponent {
       <div class="checkbox-green-light-container">
         <input
           type="checkbox"
-          id="checkboxGreenLight">
+          id="checkboxGreenLight"
+        >
         <label for="checkboxGreenLight">
           Checkbox Label
         </label>

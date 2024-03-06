@@ -19,7 +19,8 @@ export class CheckboxAquaRoundedComponent implements GeneralDesignComponent {
         <div class="checkbox-aqua-rounded-container">
           <input
             type="checkbox"
-            id="checkboxAquaRounded">
+            id="checkboxAquaRounded"
+          >
           <label for="checkboxAquaRounded">
             +
           </label>

@@ -66,10 +66,10 @@ export class LoadingAnimation4Component implements GeneralDesignComponent {
             bottom: 0;
 
             &:before {
-              content: '';
+              content: "";
               width: 50px;
               height: 5px;
-              background: #000;
+              background: #000000;
               opacity: 0.1;
               position: absolute;
               top: 59px;
@@ -79,10 +79,10 @@ export class LoadingAnimation4Component implements GeneralDesignComponent {
             }
 
             &:after {
-              content: '';
+              content: "";
               width: 50px;
               height: 50px;
-              background: #1A6844;
+              background: #1a6844;
               animation: animate .5s linear infinite;
               position: absolute;
               top: 0;

@@ -58,7 +58,7 @@ export class LoadingAnimation10Component implements GeneralDesignComponent {
 
           & > span {
             position: relative;
-            color: #fff;
+            color: #ffffff;
             font-family: sans-serif;
             font-weight: bold;
             letter-spacing: 10px;

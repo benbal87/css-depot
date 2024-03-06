@@ -24,7 +24,8 @@ export class CheckboxDarkComponent implements GeneralDesignComponent {
       <div class="checkbox-dark-container">
         <input
           type="checkbox"
-          id="checkboxDark">
+          id="checkboxDark"
+        >
         <label for="checkboxDark">
           Checkbox Label
         </label>

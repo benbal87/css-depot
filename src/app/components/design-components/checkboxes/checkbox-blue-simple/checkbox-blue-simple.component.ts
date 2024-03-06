@@ -19,7 +19,8 @@ export class CheckboxBlueSimpleComponent implements GeneralDesignComponent {
       <div class="checkbox-blue-simple-container">
         <input
           type="checkbox"
-          id="checkboxBlueSimple">
+          id="checkboxBlueSimple"
+        >
         <label for="checkboxBlueSimple">
           Checkbox Label
         </label>
@@ -72,14 +73,15 @@ export class CheckboxBlueSimpleComponent implements GeneralDesignComponent {
           user-select: none;
 
           input[type="checkbox"] {
-            $active: #275EFE;
-            $active-inner: #FFFFFF;
+            $active: #275efe;
+            $active-inner: #ffffff;
             $focus: 2px rgba(39, 94, 254, .3);
-            $border: #BBC1E1;
-            $border-hover: #275EFE;
-            $background: #FFFFFF;
-            $disabled: #F6F8FF;
-            $disabled-inner: #E1E6F9;
+            $border: #bbc1e1;
+            $border-hover: #275efe;
+            $background: #ffffff;
+            $disabled: #f6f8ff;
+            $disabled-inner: #e1e6f9;
+
             -webkit-appearance: none;
             -moz-appearance: none;
             width: 21px;
@@ -122,7 +124,7 @@ export class CheckboxBlueSimpleComponent implements GeneralDesignComponent {
             }
 
             &:after {
-              content: '';
+              content: "";
               display: block;
               position: absolute;
               width: 5px;

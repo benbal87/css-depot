@@ -18,10 +18,12 @@ export class RadioButtonAquaComponent implements GeneralDesignComponent {
       `
         <div class="radio-group">
           <div class="wrapper">
-            <input type="radio"
-                   name="radioButtonGroup"
-                   id="a"
-                   value="a">
+            <input
+              type="radio"
+              name="radioButtonGroup"
+              id="a"
+              value="a"
+            >
             <label for="a">
               <span class="indicator"></span>
               <span class="text">
@@ -30,10 +32,12 @@ export class RadioButtonAquaComponent implements GeneralDesignComponent {
             </label>
           </div>
           <div class="wrapper">
-            <input type="radio"
-                   name="radioButtonGroup"
-                   id="b"
-                   value="b">
+            <input
+              type="radio"
+              name="radioButtonGroup"
+              id="b"
+              value="b"
+            >
             <label for="b">
               <span class="indicator"></span>
               <span class="text">
@@ -42,10 +46,12 @@ export class RadioButtonAquaComponent implements GeneralDesignComponent {
             </label>
           </div>
           <div class="wrapper">
-            <input type="radio"
-                   name="radioButtonGroup"
-                   id="c"
-                   value="c">
+            <input
+              type="radio"
+              name="radioButtonGroup"
+              id="c"
+              value="c"
+            >
             <label for="c">
               <span class="indicator"></span>
               <span class="text">
@@ -54,10 +60,12 @@ export class RadioButtonAquaComponent implements GeneralDesignComponent {
             </label>
           </div>
           <div class="wrapper">
-            <input type="radio"
-                   name="radioButtonGroup"
-                   id="d"
-                   value="d">
+            <input
+              type="radio"
+              name="radioButtonGroup"
+              id="d"
+              value="d"
+            >
             <label for="d">
               <span class="indicator"></span>
               <span class="text">
@@ -74,8 +82,8 @@ export class RadioButtonAquaComponent implements GeneralDesignComponent {
     return DesignItemService.getFormattedStyle(
       `
         div.radio-group {
-          $color-aqua: #ECF0F3;
-          $color-shadow: #D1D9E6;
+          $color-aqua: #ecf0f3;
+          $color-shadow: #d1d9e6;
 
           padding: 1rem 2rem;
           border-radius: 1rem;
@@ -108,7 +116,7 @@ export class RadioButtonAquaComponent implements GeneralDesignComponent {
               display: inline-flex;
               align-items: center;
               cursor: pointer;
-              color: #394A56;
+              color: #394a56;
 
               & > span.indicator {
                 position: relative;
@@ -121,7 +129,7 @@ export class RadioButtonAquaComponent implements GeneralDesignComponent {
 
                 &::before,
                 &::after {
-                  content: '';
+                  content: "";
                   position: absolute;
                   top: 10%;
                   left: 10%;
@@ -150,7 +158,7 @@ export class RadioButtonAquaComponent implements GeneralDesignComponent {
                 transition: opacity 0.2s linear, transform 0.2s ease-out;
               }
 
-              &:hover > span.text{
+              &:hover > span.text {
                 opacity: 1;
               }
             }
