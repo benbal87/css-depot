@@ -1,0 +1,108 @@
+import { Component } from '@angular/core'
+import { DesignItemService } from '../../../../services/design-item.service'
+import {
+  GeneralDesignComponent
+} from '../../general-design/general-design.component'
+
+@Component({
+  selector: 'app-loading-animation-19',
+  standalone: true,
+  imports: [],
+  templateUrl: './loading-animation19.component.html',
+  styleUrl: './loading-animation19.component.scss'
+})
+export class LoadingAnimation19Component implements GeneralDesignComponent {
+
+  static get template(): string {
+    return DesignItemService.getFormattedTemplateFromString(
+      `
+        <div class="loader-container">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      `
+    )
+  }
+
+  static get style(): string {
+    return DesignItemService.getFormattedStyle(
+      `
+        div.loader-container {
+          @keyframes loading {
+            25% {
+              border-color: #857aa9;
+              opacity: 1;
+              filter: alpha(opacity=100);
+            }
+            50% {
+              opacity: 0;
+              filter: alpha(opacity=0);
+            }
+          }
+
+          position: relative;
+          width: 6.5rem;
+          height: 6.5rem;
+
+          & > div {
+            float: left;
+            height: 100%;
+            width: 0.3rem;
+            margin-right: 1px;
+            display: inline-block;
+
+            background-color: transparent;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            border: 1px solid #484063;
+            --webkit-border-radius: 100%;
+            --moz-border-radius: 100%;
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            --webkit-transform: translate(-50%, -50%);
+            --moz-transform: translate(-50%, -50%);
+            --ms-transform: translate(-50%, -50%);
+            --o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            --webkit-animation: loading 1.2s infinite ease-in-out;
+            --moz-animation: loading 1.2s infinite ease-in-out;
+            --o-animation: loading 1.2s infinite ease-in-out;
+            animation: loading 1.2s infinite ease-in-out;
+
+            $base-time: 0.1;
+            $base-size: 0.625;
+            @for $index from 1 through 10 {
+              $time: calc($base-time * $index);
+              $time-str: #{$time}s;
+
+              &:nth-child(#{$index}) {
+                -webkit-animation-delay: $time-str;
+                -moz-animation-delay: $time-str;
+                -o-animation-delay: $time-str;
+                animation-delay: $time-str;
+
+                background-color: if($index == 1, #857aa9, transparent);
+
+                $size-str: #{calc($base-size * ($index - 1))}rem;
+                $size: if($index == 1, #{calc($base-size * 0.3)}rem, $size-str);
+                width: $size;
+                height: $size;
+              }
+            }
+          }
+        }
+      `
+    )
+  }
+
+}

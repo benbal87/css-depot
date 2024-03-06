@@ -41,8 +41,35 @@ import {
   LoadingAnimation12Component
 } from './components/design-components/loading-animations/loading-animation-12/loading-animation12.component'
 import {
+  LoadingAnimation13Component
+} from './components/design-components/loading-animations/loading-animation-13/loading-animation13.component'
+import {
+  LoadingAnimation14Component
+} from './components/design-components/loading-animations/loading-animation-14/loading-animation14.component'
+import {
+  LoadingAnimation15Component
+} from './components/design-components/loading-animations/loading-animation-15/loading-animation15.component'
+import {
+  LoadingAnimation16Component
+} from './components/design-components/loading-animations/loading-animation-16/loading-animation16.component'
+import {
+  LoadingAnimation17Component
+} from './components/design-components/loading-animations/loading-animation-17/loading-animation17.component'
+import {
+  LoadingAnimation18Component
+} from './components/design-components/loading-animations/loading-animation-18/loading-animation18.component'
+import {
+  LoadingAnimation19Component
+} from './components/design-components/loading-animations/loading-animation-19/loading-animation19.component'
+import {
   LoadingAnimation2Component
 } from './components/design-components/loading-animations/loading-animation-2/loading-animation2.component'
+import {
+  LoadingAnimation20Component
+} from './components/design-components/loading-animations/loading-animation-20/loading-animation20.component'
+import {
+  LoadingAnimation21Component
+} from './components/design-components/loading-animations/loading-animation-21/loading-animation21.component'
 import {
   LoadingAnimation3Component
 } from './components/design-components/loading-animations/loading-animation-3/loading-animation3.component'
@@ -258,16 +285,61 @@ export class AppComponent implements OnInit {
         template: LoadingAnimation10Component.template,
         style: LoadingAnimation10Component.style
       },
-      // {
-      //   component: LoadingAnimation11Component,
-      //   template: LoadingAnimation11Component.template,
-      //   style: LoadingAnimation11Component.style
-      // },
-      // {
-      //   component: LoadingAnimation12Component,
-      //   template: LoadingAnimation12Component.template,
-      //   style: LoadingAnimation12Component.style
-      // }
+      {
+        component: LoadingAnimation11Component,
+        template: LoadingAnimation11Component.template,
+        style: LoadingAnimation11Component.style
+      },
+      {
+        component: LoadingAnimation12Component,
+        template: LoadingAnimation12Component.template,
+        style: LoadingAnimation12Component.style
+      },
+      {
+        component: LoadingAnimation13Component,
+        template: LoadingAnimation13Component.template,
+        style: LoadingAnimation13Component.style
+      },
+      {
+        component: LoadingAnimation14Component,
+        template: LoadingAnimation14Component.template,
+        style: LoadingAnimation14Component.style
+      },
+      {
+        component: LoadingAnimation15Component,
+        template: LoadingAnimation15Component.template,
+        style: LoadingAnimation15Component.style
+      },
+      {
+        component: LoadingAnimation16Component,
+        template: LoadingAnimation16Component.template,
+        style: LoadingAnimation16Component.style
+      },
+      {
+        component: LoadingAnimation17Component,
+        template: LoadingAnimation17Component.template,
+        style: LoadingAnimation17Component.style
+      },
+      {
+        component: LoadingAnimation18Component,
+        template: LoadingAnimation18Component.template,
+        style: LoadingAnimation18Component.style
+      },
+      {
+        component: LoadingAnimation19Component,
+        template: LoadingAnimation19Component.template,
+        style: LoadingAnimation19Component.style
+      },
+      {
+        component: LoadingAnimation20Component,
+        template: LoadingAnimation20Component.template,
+        style: LoadingAnimation20Component.style
+      },
+      {
+        component: LoadingAnimation21Component,
+        template: LoadingAnimation21Component.template,
+        style: LoadingAnimation21Component.style
+      }
     ]
   }
 }
