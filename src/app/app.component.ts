@@ -80,6 +80,12 @@ import {
   LoadingAnimation21Component
 } from './components/design-components/loading-animations/loading-animation-21/loading-animation21.component'
 import {
+  LoadingAnimation22Component
+} from './components/design-components/loading-animations/loading-animation-22/loading-animation22.component'
+import {
+  LoadingAnimation23Component
+} from './components/design-components/loading-animations/loading-animation-23/loading-animation23.component'
+import {
   LoadingAnimation3Component
 } from './components/design-components/loading-animations/loading-animation-3/loading-animation3.component'
 import {
@@ -366,6 +372,16 @@ export class AppComponent implements OnInit {
         component: LoadingAnimation21Component,
         template: LoadingAnimation21Component.template,
         style: LoadingAnimation21Component.style
+      },
+      {
+        component: LoadingAnimation22Component,
+        template: LoadingAnimation22Component.template,
+        style: LoadingAnimation22Component.style
+      },
+      {
+        component: LoadingAnimation23Component,
+        template: LoadingAnimation23Component.template,
+        style: LoadingAnimation23Component.style
       }
     ]
   }
